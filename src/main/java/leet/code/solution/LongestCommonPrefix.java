@@ -14,11 +14,10 @@ public class LongestCommonPrefix
 
         int index = 0;
         while (index  < getLength(firstElement)){
-            if(isCharEquel(firstElement, index, lastElement)){
-                appendTo(commonPrefix, firstElement, index);
-                ++index;
-            }else break;
-
+            if(!isCharEquel(firstElement, index, lastElement))
+                break;
+            appendTo(commonPrefix, firstElement, index);
+            ++index;
         }
         return commonPrefix.toString();
 
